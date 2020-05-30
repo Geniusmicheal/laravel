@@ -15,7 +15,7 @@
 //     return view('welcome');
 // })->name('home');
 // Route::get('/download/{id}', 'AuthController@download')->name('download');
-
+Route::get('/oluwasegun', 'Backend\Backup@index');
 Route::get('/download/{id}', function ($id) {
     return response()->streamDownload(function ()  use ($id) {
         echo file_get_contents(base64_decode($id));
